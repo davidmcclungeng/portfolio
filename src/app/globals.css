@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+:root {
+  /* Neutral grey palette with one deep green accent */
+  --background: #f4f4f3;
+  --surface: #e8e9e7;
+  --foreground: #1c1f1d;
+  --muted: color-mix(in srgb, #1c1f1d 70%, transparent);
+  --border: color-mix(in srgb, #1c1f1d 30%, transparent);
+  --grid: color-mix(in srgb, #1c1f1d 5%, transparent);
+  --accent: #1f6b4f;
+  --accent-strong: #185740;
+  --accent-deep: #11392b;
+  --close-bg: #1f2321;
+  --close-fg: #f4f4f3;
+  /* Filled buttons: text must stay >= 4.5:1 on the fill in both themes */
+  --btn-bg: var(--accent);
+  --btn-bg-hover: var(--accent-strong);
+  --btn-fg: #f7f8f7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-close-bg: var(--close-bg);
+  --color-close-fg: var(--close-fg);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141716;
+    --surface: #1d2120;
+    --foreground: #e9ece9;
+    --muted: color-mix(in srgb, #e9ece9 68%, transparent);
+    --border: color-mix(in srgb, #e9ece9 30%, transparent);
+    --grid: color-mix(in srgb, #e9ece9 5%, transparent);
+    --accent: #5fbf93;
+    --accent-strong: #93d9b6;
+    --close-bg: #1d2120;
+    --close-fg: #e9ece9;
+    --btn-bg: #5fbf93;
+    --btn-bg-hover: #93d9b6;
+    --btn-fg: #141716;
+  }
+}
+
+/* Keep anchor targets clear of the sticky 4rem nav */
+html {
+  scroll-padding-top: 4rem;
+}
+
+/* Default border colour lives in the base layer so Tailwind utilities like
+   border-accent can override it (unlayered CSS beats every layer) */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+body {
+  background-color: var(--background);
+  /* Faint drafting grid behind the page; cards sit on solid paper above it */
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+
+/* Corner registration marks, the recurring "blueprint" motif */
+.corner {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  color: color-mix(in srgb, var(--foreground) 75%, transparent);
+  pointer-events: none;
+}
+.corner::before,
+.corner::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+.corner::before {
+  left: 7px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+.corner::after {
+  top: 7px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.corner.tl {
+  top: -8px;
+  left: -8px;
+}
+.corner.tr {
+  top: -8px;
+  right: -8px;
+}
+.corner.bl {
+  bottom: -8px;
+  left: -8px;
+}
+.corner.br {
+  bottom: -8px;
+  right: -8px;
+}
+
+.plate {
+  position: relative;
+  border: 1px solid var(--border);
+  background: var(--background);
+}
+
+/* Section headings: large condensed caps ending in an accent full stop */
+.section-title {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+.section-title::after {
+  content: ".";
+  color: var(--accent);
+}
+
+.rule {
+  height: 1px;
+  border: 0;
+  margin: 0 0 20px;
+  background: var(--border);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.btn-primary {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-fg);
+}
+.btn-primary:hover {
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-bg-hover);
+}
+.btn-ghost {
+  border-color: transparent;
+  color: var(--accent-strong);
+  padding-inline: 4px;
+}
+.btn-ghost:hover {
+  color: var(--accent);
+}
+
+/* Screenshot frame: images show in full colour; the tinted border keeps them
+   inside the blueprint language */
+.duotone {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scroll reveal: hidden only once the inline script has marked JS as running */
+.js .reveal {
+  transition:
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.js .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal:not(.is-visible) {
+    opacity: 1;
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
