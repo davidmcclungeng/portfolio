@@ -74,7 +74,7 @@ export const projects: Project[] = [
     number: "01",
     role: "Tetra Tech internship",
     title: "Bat Analytics Pro",
-    body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other, and a check that blocks a summary until data entry is complete.",
+    body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other and a check that blocks a summary until data entry is complete.",
     tags: ["Laravel", "Vue", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.png",
@@ -125,7 +125,7 @@ export const experience = [
   {
     when: "Summer 2026",
     role: "Data and AI Intern, Tetra Tech",
-    body: "My first software job. I worked on Bat Analytics Pro, the ecology team's reporting app, added tests to its CI pipeline, and joined the sessions where we worked out what the team needed.",
+    body: "My first software job. I worked on Bat Analytics Pro, the ecology team's reporting app, added tests to its CI pipeline and joined the sessions where we worked out what the team needed.",
   },
   {
     when: "Ongoing, voluntary",

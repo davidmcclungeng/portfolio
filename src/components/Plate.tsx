@@ -91,7 +91,7 @@ export function Plate() {
 
           <p className="border-t border-border px-5 py-2.5 text-xs text-muted">
             I use Claude Code to write much of my code. My part is deciding
-            what to build, reading what it writes, and testing it.
+            what to build, reading what it writes and testing it.
           </p>
         </div>
       </Reveal>
