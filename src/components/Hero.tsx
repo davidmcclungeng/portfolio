@@ -10,10 +10,12 @@ export function Hero() {
           <span className="text-accent sm:block">using AI to automate manual work.</span>
         </h1>
         <p className="mt-5 max-w-[56ch] text-base leading-relaxed text-muted">
-          I&apos;m studying for an MSc in AI in Business at Queen&apos;s
-          University Belfast. I chose it to get ahead of where AI was heading.
-          Then my internship at Tetra Tech put me on a software team for the
-          first time, and I found out this is the work I want to do.
+          I&apos;m studying for an MSc in Artificial Intelligence in Business at
+          Queen&apos;s University Belfast. My internship opened my eyes to
+          software development and AI automation. I&apos;m now looking for
+          graduate roles in the field, while building my skills through
+          certifications and working on my own software projects in my free
+          time.
         </p>
         <div className="mt-7 flex flex-wrap gap-3">
           <a href={profile.resumeUrl} download className="btn btn-primary">
