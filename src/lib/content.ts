@@ -103,9 +103,9 @@ export const projects: Project[] = [
     wide: true,
     image: {
       src: "/images/project-nics.png",
-      alt: "Sign-in screen of the Ledger financial reporting app",
-      width: 1000,
-      height: 700,
+      alt: "Monthly report in Ledger with income and expenditure by category, figures and category names blurred",
+      width: 1240,
+      height: 905,
     },
     diagram: {
       label: "Every month",
