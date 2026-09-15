@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "davidmcclung-portfolio",
+  // Must match the Worker name Workers Builds created in the dashboard
+  "name": "portfolio",
   "compatibility_date": "2026-09-15",
   // Static site from `next build` (output: "export" in next.config.ts)
   "assets": {
