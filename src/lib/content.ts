@@ -12,15 +12,15 @@ export const profile = {
 export const buildRecord = [
   {
     num: "01",
-    built: "Reporting app for an ecology team",
+    built: "Bat Analytics Pro",
     value: "Laravel + Vue",
-    where: "Tetra Tech internship, 2026",
+    where: "Tetra Tech internship, summer 2026",
   },
   {
     num: "02",
-    built: "Ledger, used for a full financial year",
+    built: "Ledger",
     value: "Django + Vue 3",
-    where: "Volunteer treasurer",
+    where: "Financial reporting tool",
   },
   {
     num: "03",
@@ -39,12 +39,12 @@ export const buildRecord = [
 export const skillGroups = [
   {
     label: "Backend",
-    body: "Laravel from the internship, Django self-taught for Ledger, both on SQL databases.",
+    body: "Laravel on Bat Analytics Pro and Django on Ledger, both backed by SQL databases.",
     tags: ["Laravel", "Django", "SQL"],
   },
   {
     label: "Frontend",
-    body: "Vue on the internship app. Vue 3 and TypeScript on the Premier Sound Solutions site.",
+    body: "Vue on Bat Analytics Pro, and Vue 3 with TypeScript on the Premier Sound Solutions site.",
     tags: ["Vue", "TypeScript", "PrimeVue"],
   },
   {
@@ -71,12 +71,12 @@ export const projects: Project[] = [
   {
     number: "01",
     role: "Tetra Tech internship",
-    title: "Ecology reporting app",
-    body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I designed the JSON format it sends, the short-lived signed token the two services use to trust each other, and a check that blocks a summary until data entry is complete.",
+    title: "Bat Analytics Pro",
+    body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I designed the JSON format it sends, the short-lived signed token the two services use to trust each other, and a check that blocks a summary until data entry is complete.",
     tags: ["Laravel", "Vue", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.png",
-      alt: "Dashboard of the ecology reporting app showing bat survey totals, a species composition pie chart and monthly bat calls",
+      alt: "Dashboard of Bat Analytics Pro showing bat survey totals, a species composition pie chart and monthly bat calls",
       width: 1570,
       height: 700,
     },
@@ -123,7 +123,7 @@ export const experience = [
   {
     when: "Summer 2026",
     role: "Data and AI Intern, Tetra Tech",
-    body: "My first software job. I worked on the ecology team's reporting app, added tests to its CI pipeline, and joined the sessions where we worked out what the team needed.",
+    body: "My first software job. I worked on Bat Analytics Pro, the ecology team's reporting app, added tests to its CI pipeline, and joined the sessions where we worked out what the team needed.",
   },
   {
     when: "Ongoing, voluntary",
