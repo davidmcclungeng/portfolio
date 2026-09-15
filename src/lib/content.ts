@@ -72,7 +72,7 @@ export const projects: Project[] = [
     number: "01",
     role: "Tetra Tech internship",
     title: "Bat Analytics Pro",
-    body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I designed the JSON format it sends, the short-lived signed token the two services use to trust each other, and a check that blocks a summary until data entry is complete.",
+    body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other, and a check that blocks a summary until data entry is complete.",
     tags: ["Laravel", "Vue", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.png",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
   },
   {
     number: "02",
-    role: "Freelance, in progress",
+    role: "Freelance, in development",
     title: "Premier Sound Solutions",
     body: "I used to work there as a media technician. They've asked me back to replace their old WordPress site with one that wins new clients and shows their installations. I'm building it in Vue 3 and TypeScript.",
     tags: ["Vue 3", "TypeScript", "PrimeVue"],
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     number: "03",
     role: "Volunteer treasurer, in use",
     title: "Ledger",
-    body: "I'm treasurer for Newtownabbey Independent Christian School, and its accounts were kept in Excel. I taught myself Python and Django to build a replacement. It has now been used for a full financial year, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee.",
+    body: "I'm treasurer for Newtownabbey Independent Christian School, and its accounts were kept in Excel. I have used Python and Django to build a replacement. It has now been used to process a full financial year, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee.",
     tags: ["Python", "Django", "Vue 3"],
     wide: true,
     image: {
