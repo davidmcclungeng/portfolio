@@ -76,9 +76,9 @@ export const projects: Project[] = [
     tags: ["Laravel", "Vue", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.png",
-      alt: "Dashboard of Bat Analytics Pro showing bat survey totals, a species composition pie chart and monthly bat calls",
-      width: 1570,
-      height: 700,
+      alt: "Export page of Bat Analytics Pro listing downloadable survey tables as Excel and PNG files",
+      width: 1017,
+      height: 490,
     },
   },
   {
