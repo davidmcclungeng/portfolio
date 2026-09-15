@@ -15,8 +15,8 @@ export function Plate() {
             <span className="whitespace-nowrap border-l border-border p-3 px-5 text-xs uppercase tracking-[0.08em] text-muted">
               {profile.location}
             </span>
-            <span className="whitespace-nowrap border-l border-border p-3 px-5 text-xs uppercase tracking-[0.08em] text-muted">
-              Sheet 01
+            <span className="whitespace-nowrap border-l border-border p-3 px-5 text-xs font-semibold uppercase tracking-[0.08em] text-accent-strong">
+              {profile.status}
             </span>
           </header>
 

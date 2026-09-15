@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# David McClung – Portfolio
 
-## Getting Started
+Live at **[davidmcclung.work](https://davidmcclung.work)**
 
-First, run the development server:
+Personal portfolio for David McClung, an MSc AI in Business student at Queen's University Belfast looking for graduate software developer and AI / automation roles. The site covers the projects I have worked on (Bat Analytics Pro at Tetra Tech, Ledger, and the Premier Sound Solutions website), my experience and education, and links to my CV.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- [Next.js](https://nextjs.org) (App Router) with React and TypeScript, built as a fully static export
+- [Tailwind CSS](https://tailwindcss.com) v4 with CSS variables for the light and dark themes
+- Barlow and Barlow Condensed via `next/font`
+- Hosted on [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/) static assets, deployed by Workers Builds on every push to `main`
+
+## Project structure
+
+```
+src/
+  app/            layout, page, global styles, icons and link-preview image
+  components/     page sections (Hero, Plate, Skills, Work, Background, Contact, Nav)
+  lib/content.ts  all site copy: profile, build record, skills, projects, experience, education
+public/           CV (PDF) and project screenshots
+wrangler.jsonc    Cloudflare Worker config and custom domains
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Most text changes only need `src/lib/content.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Run locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run lint
+npm run build   # static export to out/
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+Pushing to `main` triggers Cloudflare Workers Builds, which runs `npm run build` and `npx wrangler deploy`. The `routes` in `wrangler.jsonc` attach `davidmcclung.work` and `www.davidmcclung.work` as custom domains.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project screenshots contain no real client, survey or financial data: they are cropped to non-sensitive views or taken from demo data with figures blurred.
