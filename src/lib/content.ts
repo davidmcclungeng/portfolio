@@ -14,13 +14,13 @@ export const buildRecord = [
     num: "01",
     built: "Bat Analytics Pro",
     value: "Laravel + Vue",
-    where: "Tetra Tech internship, summer 2026",
+    where: "Tetra Tech Internship, Summer 2026",
   },
   {
     num: "02",
     built: "Ledger",
     value: "Django + Vue 3",
-    where: "Financial reporting tool",
+    where: "Financial Reporting Tool",
   },
   {
     num: "03",
@@ -32,7 +32,7 @@ export const buildRecord = [
     num: "04",
     built: "Current study",
     value: "MSc AI in Business",
-    where: "Queen's, 2025 to present",
+    where: "QUB, 2025 to present",
   },
 ];
 
