@@ -13,7 +13,7 @@ export function Hero() {
           I&apos;m studying for an MSc in Artificial Intelligence in Business at
           Queen&apos;s University Belfast. My internship opened my eyes to
           software development and AI automation. I&apos;m now looking for
-          graduate roles in the field, while building my skills through
+          my first role in the field, while building my skills through
           certifications and working on my own software projects in my free
           time.
         </p>

@@ -14,7 +14,8 @@ export function Contact() {
             Let&apos;s work together.
           </h2>
           <p className="mt-3 max-w-[56ch] text-[15px] leading-relaxed opacity-85">
-            I&apos;m looking for {profile.targetRoles} in {profile.workPreference}.
+            I&apos;m an aspiring software developer looking for {profile.targetRoles} in{" "}
+            {profile.workPreference}.
             {" "}{profile.status}. <br />Email is the best way to reach me.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">

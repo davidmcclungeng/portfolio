@@ -2,7 +2,7 @@
 
 Live at **[davidmcclung.work](https://davidmcclung.work)**
 
-Personal portfolio for David McClung, an MSc AI in Business student at Queen's University Belfast looking for graduate software developer and AI / automation roles. The site covers the projects I have worked on (Bat Analytics Pro at Tetra Tech, Ledger, and the Premier Sound Solutions website), my experience and education, and links to my CV.
+Personal portfolio for David McClung, an aspiring software developer and MSc AI in Business student at Queen's University Belfast, looking for software and AI / automation roles. The site covers the projects I have worked on (Bat Analytics Pro at Tetra Tech, Ledger, and the Premier Sound Solutions website), my experience and education, and links to my CV.
 
 ## Stack
 

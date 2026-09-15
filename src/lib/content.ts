@@ -3,7 +3,7 @@ export const profile = {
   role: "Aspiring AI Engineer & Full-Stack Developer",
   location: "Belfast, UK",
   status: "Available now",
-  targetRoles: "graduate software developer and AI / automation roles",
+  targetRoles: "software and AI / automation roles",
   workPreference: "Belfast, hybrid or on-site",
   email: "davidmcclung15@outlook.com",
   github: "https://github.com/davidmcclungeng",
