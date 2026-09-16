@@ -77,10 +77,10 @@ export const projects: Project[] = [
     body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other and a check that blocks a summary until data entry is complete.",
     tags: ["Laravel", "Vue", "JSON Schema", "Claude Code"],
     image: {
-      src: "/images/project-tetratech.png",
+      src: "/images/project-tetratech.webp",
       alt: "Export page of Bat Analytics Pro listing downloadable survey tables as Excel and PNG files",
-      width: 1017,
-      height: 490,
+      width: 840,
+      height: 405,
     },
   },
   {
@@ -90,10 +90,10 @@ export const projects: Project[] = [
     body: "I used to work there as a media technician. They've asked me back to replace their old WordPress site with one that wins new clients and shows their installations. I'm building it in Vue 3 and TypeScript.",
     tags: ["Vue 3", "TypeScript", "PrimeVue"],
     image: {
-      src: "/images/project-pss.png",
+      src: "/images/project-pss.webp",
       alt: "Homepage of the new Premier Sound Solutions website",
-      width: 1440,
-      height: 900,
+      width: 840,
+      height: 525,
     },
   },
   {
@@ -104,10 +104,10 @@ export const projects: Project[] = [
     tags: ["Python", "Django", "Vue 3"],
     wide: true,
     image: {
-      src: "/images/project-nics.png",
+      src: "/images/project-nics.webp",
       alt: "Monthly report in Ledger with income and expenditure by category, figures and category names blurred",
-      width: 1240,
-      height: 905,
+      width: 1080,
+      height: 788,
     },
     diagram: {
       label: "Every month",

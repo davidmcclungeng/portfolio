@@ -26,7 +26,8 @@ export function Reveal({
           observer.disconnect();
         }
       },
-      // Any overlap counts, so tall sections on short screens still reveal
+      // Fires once the element is 10% above the viewport bottom, so a section
+      // animates in as it is read rather than the instant its first pixel lands
       { rootMargin: "0px 0px -10% 0px" },
     );
     observer.observe(el);

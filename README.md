@@ -16,9 +16,10 @@ Personal portfolio for David McClung, an aspiring software developer and MSc AI 
 ```
 src/
   app/            layout, page, global styles, icons and link-preview image
+                  robots.ts and sitemap.ts (static metadata routes)
   components/     page sections (Hero, Plate, Skills, Work, Background, Contact, Nav)
   lib/content.ts  all site copy: profile, build record, skills, projects, experience, education
-public/           CV (PDF) and project screenshots
+public/           CV (PDF), project screenshots (WebP) and _headers (security headers)
 wrangler.jsonc    Cloudflare Worker config and custom domains
 ```
 
@@ -31,6 +32,7 @@ npm install
 npm run dev     # http://localhost:3000
 npm run lint
 npm run build   # static export to out/
+npm start       # serve the built output (`next start` cannot serve a static export)
 ```
 
 ## Deploy

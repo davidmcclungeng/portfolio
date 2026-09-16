@@ -1,0 +1,11 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  # Static export embeds the RSC payload in inline <script> tags whose contents
+  # change every build, and there is no server to issue a per-request nonce, so
+  # script-src cannot be hash- or nonce-based here. 'self' still blocks scripts
+  # from any other origin, which is the vector that matters on a site with no
+  # user input. frame-ancestors/form-action/base-uri are the real wins.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests

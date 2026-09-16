@@ -7,6 +7,8 @@
   --foreground: #1c1f1d;
   --muted: color-mix(in srgb, #1c1f1d 70%, transparent);
   --border: color-mix(in srgb, #1c1f1d 30%, transparent);
+  /* Borders that identify a control need 3:1 (WCAG 1.4.11); 30% only reaches 1.9:1 */
+  --border-strong: color-mix(in srgb, #1c1f1d 55%, transparent);
   --grid: color-mix(in srgb, #1c1f1d 5%, transparent);
   --accent: #1f6b4f;
   --accent-strong: #185740;
@@ -25,6 +27,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-close-bg: var(--close-bg);
@@ -40,6 +43,7 @@
     --foreground: #e9ece9;
     --muted: color-mix(in srgb, #e9ece9 68%, transparent);
     --border: color-mix(in srgb, #e9ece9 30%, transparent);
+    --border-strong: color-mix(in srgb, #e9ece9 45%, transparent);
     --grid: color-mix(in srgb, #e9ece9 5%, transparent);
     --accent: #5fbf93;
     --accent-strong: #93d9b6;

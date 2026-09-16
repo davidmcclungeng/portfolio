@@ -25,7 +25,7 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
         aria-controls="mobile-menu"
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((o) => !o)}
-        className="flex h-10 w-10 items-center justify-center border border-border text-foreground"
+        className="flex h-10 w-10 items-center justify-center border border-border-strong text-foreground"
       >
         {open ? <XIcon size={20} /> : <ListIcon size={20} />}
       </button>

@@ -40,11 +40,6 @@ export function Work() {
                       alt={project.image.alt}
                       width={project.image.width}
                       height={project.image.height}
-                      sizes={
-                        project.wide
-                          ? "(min-width: 1040px) 540px, (min-width: 768px) 55vw, 100vw"
-                          : "(min-width: 1040px) 420px, (min-width: 640px) 50vw, 100vw"
-                      }
                       className="h-auto w-full object-cover"
                     />
                   </div>

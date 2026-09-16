@@ -17,8 +17,8 @@ export default function Home() {
         <Skills />
         <Work />
         <Background />
+        <Contact />
       </main>
-      <Contact />
       <Footer />
     </>
   );
