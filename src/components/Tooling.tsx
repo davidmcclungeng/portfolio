@@ -11,7 +11,7 @@ export function Tooling() {
         <p className="mb-7 max-w-[68ch] text-sm leading-relaxed text-muted">
           {toolingIntro}
         </p>
-        <div className="grid gap-7 md:grid-cols-2">
+        <div className="grid gap-x-7 gap-y-12 md:grid-cols-2">
           {toolingCalls.map((call) => (
             <div
               key={call.what}
