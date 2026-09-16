@@ -8,7 +8,7 @@ export function Skills() {
       <Reveal>
         <h2 className="section-title">Skills &amp; stack</h2>
         <hr className="rule" />
-        <div className="grid gap-7 md:grid-cols-3">
+        <div className="grid gap-x-7 gap-y-12 md:grid-cols-3">
           {skillGroups.map((group) => (
             <div key={group.label} className="relative border border-border bg-background p-6">
               <Corners />

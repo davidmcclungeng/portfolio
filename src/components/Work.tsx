@@ -9,7 +9,7 @@ export function Work() {
       <Reveal>
         <h2 className="section-title">Projects</h2>
         <hr className="rule" />
-        <div className="grid gap-7 sm:grid-cols-2">
+        <div className="grid gap-x-7 gap-y-12 sm:grid-cols-2">
           {projects.map((project) => (
             <div
               key={project.number}
