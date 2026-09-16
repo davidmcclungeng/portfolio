@@ -4,6 +4,7 @@ import { MobileMenu } from "./MobileMenu";
 const links = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
+  { href: "#tooling", label: "AI tooling" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
   { href: profile.github, label: "GitHub", external: true },
