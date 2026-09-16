@@ -147,3 +147,44 @@ export const education = [
     what: "A Levels, Digital Technology (A), Geography (A), Business Studies (B); AS Design & Technology (B)",
   },
 ];
+
+export type ToolingCall = {
+  verdict: string;
+  // Filled chip where the call kept a tool, outline where it removed one
+  kept: boolean;
+  what: string;
+  body: string;
+};
+
+export const toolingIntro =
+  "I use Claude Code every day, wired through MCP to GitHub, Azure, Cloudflare and a real browser. Giving an agent that much reach is the easy part. The engineering is in deciding what to trust, and these are the calls I have actually made.";
+
+export const toolingCalls: ToolingCall[] = [
+  {
+    verdict: "Adopted",
+    kept: true,
+    what: "GitHub and Azure, on least privilege",
+    body: "Both reach real accounts, so I treat them as production-adjacent by default. The GitHub token is fine-grained and scoped to the repositories I actually work in, with the admin and organisation toolsets left off. Reading and inspecting runs freely; anything that mutates infrastructure stops and asks me first.",
+  },
+  {
+    verdict: "Rejected",
+    kept: false,
+    what: "A community Docker MCP server",
+    body: "It asked for full Docker socket access, which is root-equivalent control of the host, and the source repository it linked to was a dead GitHub link. An unverifiable source requesting the highest possible privilege is the one combination I will not accept. I drive Docker from the CLI instead.",
+  },
+  {
+    verdict: "Removed",
+    kept: false,
+    what: "A skill that scanned as critical risk",
+    body: "I read it myself and it looked harmless. I removed it anyway. It came from a repository with almost no usage behind it, and a rating that severe deserves more than my own quick read. I would rather lose a nice-to-have than overrule a warning I cannot explain.",
+  },
+  {
+    verdict: "Kept, with eyes open",
+    kept: true,
+    what: "A skill that fetches its own instructions",
+    body: "It comes from an official Vercel repository, but it pulls its rules from a remote file every time it runs rather than shipping them. The source is trustworthy enough to keep, and it is still a different shape of risk from a fixed skill: a future change to that one file reaches me automatically. That is a trade I made knowingly, not one I missed.",
+  },
+];
+
+export const toolingRule =
+  "The check before anything gets installed: the source repository has to be real and inspectable, the permissions it asks for have to match what it credibly needs, and a scanner warning I cannot account for is a no.";

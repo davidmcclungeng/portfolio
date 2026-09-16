@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Plate } from "@/components/Plate";
 import { Skills } from "@/components/Skills";
 import { Work } from "@/components/Work";
+import { Tooling } from "@/components/Tooling";
 import { Background } from "@/components/Background";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
         <Plate />
         <Skills />
         <Work />
+        <Tooling />
         <Background />
         <Contact />
       </main>
