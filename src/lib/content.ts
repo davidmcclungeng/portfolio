@@ -32,9 +32,9 @@ export const buildRecord = [
   },
   {
     num: "04",
-    built: "Current study",
+    built: "Postgraduate study",
     value: "MSc AI in Business",
-    where: "QUB, 2025 to present",
+    where: "QUB, 2025 to 2026",
   },
 ];
 
@@ -42,12 +42,12 @@ export const skillGroups = [
   {
     label: "Backend",
     body: "Laravel on Bat Analytics Pro and Django on Ledger, both backed by SQL databases.",
-    tags: ["Laravel", "Django", "SQL"],
+    tags: ["Laravel", "Django", "Python", "SQL"],
   },
   {
     label: "Frontend",
-    body: "Vue on Bat Analytics Pro, and Vue 3 with TypeScript on the Premier Sound Solutions site.",
-    tags: ["Vue", "TypeScript", "PrimeVue"],
+    body: "Vue on Bat Analytics Pro, Vue 3 with JavaScript on Ledger and Vue 3 with TypeScript on the Premier Sound Solutions site.",
+    tags: ["Vue", "JavaScript", "TypeScript", "PrimeVue"],
   },
   {
     label: "Tools & testing",
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     role: "Volunteer treasurer, in use",
     title: "Ledger",
     body: "I'm treasurer for Newtownabbey Independent Christian School, and its accounts were kept in Excel. I have used Python and Django to build a replacement. It has now been used to process a full financial year, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee.",
-    tags: ["Python", "Django", "Vue 3"],
+    tags: ["Python", "Django", "Vue 3", "JavaScript"],
     wide: true,
     image: {
       src: "/images/project-nics.webp",
@@ -140,7 +140,7 @@ export const experience = [
 ];
 
 export const education = [
-  { when: "2025 - present", what: "MSc AI in Business, Queen's University Belfast" },
+  { when: "2025 - 2026", what: "MSc AI in Business, Queen's University Belfast" },
   { when: "2021 - 2024", what: "BA Broadcast Production, Queen's University Belfast" },
   {
     when: "2020 - 2021",
