@@ -46,7 +46,7 @@ export const skillGroups = [
   },
   {
     label: "Frontend",
-    body: "Vue on Bat Analytics Pro, Vue 3 with JavaScript on Ledger and Vue 3 with TypeScript on the Premier Sound Solutions site.",
+    body: "Vue with JavaScript on Bat Analytics Pro and Ledger. Vue 3 with TypeScript on the Premier Sound Solutions site.",
     tags: ["Vue", "JavaScript", "TypeScript", "PrimeVue"],
   },
   {
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     role: "Tetra Tech internship",
     title: "Bat Analytics Pro",
     body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other and a check that blocks a summary until data entry is complete.",
-    tags: ["Laravel", "Vue", "JSON Schema", "Claude Code"],
+    tags: ["Laravel", "Vue", "JavaScript", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.webp",
       alt: "Export page of Bat Analytics Pro listing downloadable survey tables as Excel and PNG files",
