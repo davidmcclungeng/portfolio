@@ -41,8 +41,8 @@ export const buildRecord = [
 export const skillGroups = [
   {
     label: "Backend",
-    body: "Laravel on Bat Analytics Pro and Django on Ledger, both backed by SQL databases.",
-    tags: ["Laravel", "Django", "Python", "SQL"],
+    body: "Django and Python on Ledger, backed by a SQL database. On Bat Analytics Pro I worked mostly on the frontend, against a Laravel API.",
+    tags: ["Django", "Python", "SQL", "Laravel"],
   },
   {
     label: "Frontend",
