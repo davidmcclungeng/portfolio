@@ -51,8 +51,8 @@ export const skillGroups = [
   },
   {
     label: "Tools & testing",
-    body: "Claude Code day to day. Pest and PHPUnit tests, run through Azure Pipelines.",
-    tags: ["Claude Code", "Git", "Azure Pipelines"],
+    body: "Claude Code day to day. Pest and PHPUnit tests written in PHP, run through Azure Pipelines.",
+    tags: ["Claude Code", "Git", "PHP", "Azure Pipelines"],
   },
 ];
 
