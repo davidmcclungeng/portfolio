@@ -8,9 +8,10 @@ export function Hero() {
         <span className="text-accent sm:block">using AI to automate manual work.</span>
       </h1>
       <p className="mt-5 max-w-[56ch] text-base leading-relaxed text-muted">
-        I&apos;m studying for an MSc in Artificial Intelligence in Business at
-        Queen&apos;s University Belfast. My internship opened my eyes to
-        software development and AI automation. I&apos;m now looking for
+        I have just completed an MSc in Artificial Intelligence in Business at
+        Queen&apos;s University Belfast, and hope to graduate in December
+        2026. My summer internship with Tetra Tech&apos;s Data &amp; AI team
+        opened my eyes to software development and AI automation. I&apos;m now looking for
         my first role in the field, while building my skills through
         certifications and working on my own software projects in my free
         time.
