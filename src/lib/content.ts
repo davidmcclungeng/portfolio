@@ -69,8 +69,8 @@ export const skillGroups = [
   },
   {
     label: "Process & people",
-    body: "Mapped the ecology team's reporting process at Tetra Tech, then demoed Bat Analytics Pro and helped them adopt it. Monthly reports to a non-technical committee as treasurer, and 50+ people trained on AV systems before that.",
-    tags: ["Process mapping", "User adoption", "Stakeholder reporting", "Training"],
+    body: "Worked in a Scrum team at Tetra Tech, where I mapped the ecology team's reporting process, then demoed Bat Analytics Pro and helped them adopt it. Monthly reports to a non-technical committee as treasurer, and 50+ people trained on AV systems before that.",
+    tags: ["Process mapping", "Agile / Scrum", "User adoption", "Stakeholder reporting", "Training"],
   },
 ];
 
@@ -143,7 +143,7 @@ export const experience = [
   {
     when: "Summer 2026",
     role: "Data and AI Intern, Tetra Tech",
-    body: "My first software job. I mapped the ecology team's reporting process, worked on Bat Analytics Pro and helped the team adopt it through demos. I also added tests to its CI pipeline and joined the sessions where we worked out what the team needed.",
+    body: "My first software job, working in a Scrum team. I mapped the ecology team's reporting process, worked on Bat Analytics Pro and helped the team adopt it through demos. I also added tests to its CI pipeline and joined the sessions where we worked out what the team needed.",
   },
   {
     when: "Since March 2025, voluntary",
