@@ -17,14 +17,14 @@ const barlowCondensed = Barlow_Condensed({
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidmcclung.work"),
   alternates: { canonical: "/" },
-  title: "David McClung | Aspiring Software Developer",
+  title: "David McClung | Software, Automation & Digital Transformation",
   description:
-    "Aspiring software developer who has just completed an MSc in AI in Business at Queen's University Belfast, using AI to automate manual work. Available now for software, AI / automation and digital transformation roles in Belfast.",
+    "Turning manual processes into software people use. Just completed an MSc in AI in Business at Queen's University Belfast. Available now for software, AI / automation and digital transformation roles in Belfast.",
   // Link previews on LinkedIn, Slack, email and X; the image comes from app/opengraph-image.png
   openGraph: {
-    title: "David McClung | Aspiring Software Developer",
+    title: "David McClung | Software, Automation & Digital Transformation",
     description:
-      "Aspiring software developer looking for software, AI / automation and digital transformation roles in Belfast. Available now.",
+      "Turning manual processes into software people use. Looking for software, AI / automation and digital transformation roles in Belfast. Available now.",
     url: "/",
     siteName: "David McClung",
     locale: "en_GB",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "David McClung | Aspiring Software Developer",
+    title: "David McClung | Software, Automation & Digital Transformation",
     description:
-      "Aspiring software developer looking for software, AI / automation and digital transformation roles in Belfast. Available now.",
+      "Turning manual processes into software people use. Looking for software, AI / automation and digital transformation roles in Belfast. Available now.",
   },
 };
 
