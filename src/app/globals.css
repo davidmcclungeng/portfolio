@@ -59,6 +59,12 @@ html {
   scroll-padding-top: 4rem;
 }
 
+/* Sections focused by CleanHashLinks are jump targets, not controls; an outline
+   around a whole section would read as a stray border */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
 /* Default border colour lives in the base layer so Tailwind utilities like
    border-accent can override it (unlayered CSS beats every layer) */
 @layer base {

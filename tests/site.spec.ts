@@ -126,6 +126,32 @@ test.describe("accessibility", () => {
   });
 });
 
+test.describe("in-page links", () => {
+  test("jump to their section without adding # to the URL", async ({ page }, testInfo) => {
+    if (testInfo.project.name === "mobile") {
+      await page.locator('button[aria-controls="mobile-menu"]').click();
+    }
+    await page.locator('header a[href="#experience"]:visible').click();
+    await expect(page.locator("#experience")).toBeInViewport();
+    expect(page.url()).not.toContain("#");
+  });
+
+  test("a shared #section link still opens there, then tidies the URL", async ({ page }) => {
+    await page.goto("/#education");
+    await expect(page.locator("#education")).toBeInViewport();
+    await expect.poll(() => page.url()).not.toContain("#");
+  });
+
+  test("keep their # hrefs so they work with JavaScript off", async ({ browser }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false });
+    const page = await context.newPage();
+    await page.goto("/");
+    await page.locator('header a[href="#projects"]').first().evaluate((a: HTMLAnchorElement) => a.click());
+    await expect(page).toHaveURL(/#projects$/);
+    await context.close();
+  });
+});
+
 test.describe("static export integrity", () => {
   test("serves robots.txt and sitemap.xml", async ({ page }) => {
     for (const path of ["/robots.txt", "/sitemap.xml"]) {
