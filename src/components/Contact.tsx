@@ -1,5 +1,8 @@
-import { profile } from "@/lib/content";
+import { contact, profile } from "@/lib/content";
 import { Reveal } from "./Reveal";
+
+// Show a profile link without its scheme, so the label can't drift from the URL
+const linkLabel = (url: string) => url.replace(/^https?:\/\//, "");
 
 export function Contact() {
   return (
@@ -11,12 +14,11 @@ export function Contact() {
       <div className="mx-auto max-w-[1040px] px-6 py-14 lg:px-10">
         <Reveal>
           <h2 className="font-heading text-4xl font-semibold uppercase leading-none tracking-[0.01em] sm:text-5xl">
-            Let&apos;s work together.
+            {contact.heading}
           </h2>
           <p className="mt-3 max-w-[56ch] text-[15px] leading-relaxed opacity-85">
-            I&apos;m an aspiring software developer looking for {profile.targetRoles} in{" "}
-            {profile.workPreference}.
-            {" "}{profile.status}. <br />Email is the best way to reach me.
+            {contact.body} <br />
+            {contact.cta}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -33,7 +35,7 @@ export function Contact() {
               className="btn"
               style={{ borderColor: "transparent", color: "var(--close-fg)", paddingInline: 4 }}
             >
-              github.com/davidmcclungeng
+              {linkLabel(profile.github)}
             </a>
             <a
               href={profile.linkedin}
@@ -42,7 +44,7 @@ export function Contact() {
               className="btn"
               style={{ borderColor: "transparent", color: "var(--close-fg)", paddingInline: 4 }}
             >
-              linkedin.com/in/davidmcclung25
+              {linkLabel(profile.linkedin)}
             </a>
           </div>
         </Reveal>

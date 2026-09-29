@@ -1,6 +1,5 @@
 export const profile = {
   name: "David McClung",
-  role: "Aspiring AI Engineer & Full-Stack Developer",
   location: "Belfast, UK",
   status: "Available now",
   targetRoles: "software and AI / automation roles",
@@ -9,6 +8,14 @@ export const profile = {
   github: "https://github.com/davidmcclungeng",
   linkedin: "https://linkedin.com/in/davidmcclung25",
   resumeUrl: "/David-McClung-Resume.pdf",
+};
+
+export const hero = {
+  // Two lines of the h1; the second is set in the accent colour
+  headline: "Aspiring software developer,",
+  headlineAccent: "using AI to automate manual work.",
+  intro:
+    "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and hope to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team opened my eyes to software development and AI automation. I'm now looking for my first role in the field, while building my skills through certifications and working on my own software projects in my free time.",
 };
 
 export const buildRecord = [
@@ -37,6 +44,9 @@ export const buildRecord = [
     where: "QUB, 2025 to 2026",
   },
 ];
+
+export const buildRecordNote =
+  "I use Claude Code to write much of my code. My part is deciding what to build, reading what it writes and testing it.";
 
 export const skillGroups = [
   {
@@ -188,3 +198,10 @@ export const toolingCalls: ToolingCall[] = [
 
 export const toolingRule =
   "The check before anything gets installed: the source repository has to be real and inspectable, the permissions it asks for have to match what it credibly needs, and a scanner warning I cannot account for is a no.";
+
+export const contact = {
+  heading: "Let's work together.",
+  body: `I'm an aspiring software developer looking for ${profile.targetRoles} in ${profile.workPreference}. ${profile.status}.`,
+  // Starts on its own line
+  cta: "Email is the best way to reach me.",
+};
