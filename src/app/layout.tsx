@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
+import { CleanHashLinks } from "@/components/CleanHashLinks";
 
 const barlow = Barlow({
   variable: "--font-body",
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
+        <CleanHashLinks />
       </body>
     </html>
   );
