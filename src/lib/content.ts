@@ -14,6 +14,9 @@ export const hero = {
   // Two lines of the h1; the second is set in the accent colour
   headline: "Aspiring software developer,",
   headlineAccent: "using AI to automate manual work.",
+  // Kinds of role sought, shown as a strip under the headline
+  rolesLabel: "Open to",
+  roles: ["Software developer", "Digital transformation", "Automation with AI"],
   intro:
     "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and hope to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team opened my eyes to software development and AI automation. The work I enjoy most is sitting down with a team, learning how they do a job today and building software that takes the repetitive parts off their hands, so they have more time for the work that needs them. I'm now looking for my first role in the field, while building my skills through certifications and working on my own software projects in my free time.",
 };
