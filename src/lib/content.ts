@@ -12,8 +12,8 @@ export const profile = {
 
 export const hero = {
   // Two lines of the h1; the second is set in the accent colour
-  headline: "Aspiring software developer,",
-  headlineAccent: "using AI to automate manual work.",
+  headline: "Turning manual processes",
+  headlineAccent: "into software people use.",
   // Kinds of role sought, shown as a strip under the headline
   rolesLabel: "Open to",
   roles: ["Software developer", "Digital transformation", "Automation with AI"],
@@ -157,7 +157,7 @@ export const toolingCards: ToolingCard[] = [
 
 export const contact = {
   heading: "Let's work together.",
-  body: `I'm an aspiring software developer looking for ${profile.targetRoles} in ${profile.workPreference}. ${profile.status}.`,
+  body: `I'm looking for ${profile.targetRoles} in ${profile.workPreference}. ${profile.status}.`,
   // Starts on its own line
   cta: "Email is the best way to reach me.",
 };
