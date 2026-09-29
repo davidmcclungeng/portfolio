@@ -18,7 +18,7 @@ export function Nav() {
           href="#top"
           className="font-heading text-lg font-semibold text-foreground"
         >
-          David McClung<span className="hidden md:inline">, MSc AI in Business</span>
+          David McClung
         </a>
         <div className="flex items-center gap-3 md:gap-6">
           <ul className="hidden items-center gap-6 md:flex">
