@@ -158,10 +158,10 @@ export const experience = [
 ];
 
 export const education = [
-  { when: "2025 - 2026", what: "MSc AI in Business, Queen's University Belfast" },
-  { when: "2021 - 2024", what: "BA Broadcast Production, Queen's University Belfast" },
+  { when: "2025 – 2026", what: "MSc AI in Business, Queen's University Belfast" },
+  { when: "2021 – 2024", what: "BA Broadcast Production, Queen's University Belfast" },
   {
-    when: "2020 - 2021",
+    when: "2020 – 2021",
     what: "A Levels, Digital Technology (A), Geography (A), Business Studies (B); AS Design & Technology (B)",
   },
 ];
