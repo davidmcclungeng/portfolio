@@ -1,11 +1,12 @@
 import { profile } from "@/lib/content";
 import { MobileMenu } from "./MobileMenu";
 
+// Same order as the page; the name on the left already links to the top
 const links = [
-  { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#tooling", label: "AI Tooling" },
   { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+  { href: "#tooling", label: "Working with AI" },
   { href: "#education", label: "Education" },
   { href: profile.github, label: "GitHub", external: true },
 ];
