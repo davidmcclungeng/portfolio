@@ -18,7 +18,7 @@ export const hero = {
   rolesLabel: "Open to",
   roles: ["Software developer", "Digital transformation", "Automation with AI"],
   intro:
-    "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and am due to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team opened my eyes to software development and AI automation. The work I enjoy most is sitting down with a team, learning how they do a job today and building software that takes the repetitive parts off their hands, so they have more time for the work that needs them. I'm now looking for my first role in the field.",
+    "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and am due to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team was my first software job. The work I enjoy most is sitting down with a team, learning how they do a job today and building software that takes the repetitive parts off their hands, so they have more time for the work that needs them. I'm now looking for my first role in the field.",
 };
 
 export const buildRecord = [
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     number: "03",
     role: "Volunteer treasurer, in use",
     title: "Ledger",
-    body: "I'm treasurer for Newtownabbey Independent Christian School. Its accounts were kept in Excel, and keeping them up took me several evenings every month. I built Ledger in Python and Django to handle the repetitive parts, and the monthly accounts now take about 30 minutes. It has processed a full financial year, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee.",
+    body: "I've been treasurer for Newtownabbey Independent Christian School since March 2025, and for over a year I kept its accounts by hand in Excel, which took several evenings every month. In August 2026 I built Ledger in Python and Django to handle the repetitive parts, then entered the previous financial year into it, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee. My first live month in Ledger took under 30 minutes.",
     tags: ["Python", "Django", "Vue 3", "JavaScript"],
     wide: true,
     image: {
@@ -146,9 +146,9 @@ export const experience = [
     body: "My first software job. I mapped the ecology team's reporting process, worked on Bat Analytics Pro and helped the team adopt it through demos. I also added tests to its CI pipeline and joined the sessions where we worked out what the team needed.",
   },
   {
-    when: "Ongoing, voluntary",
+    when: "Since March 2025, voluntary",
     role: "Treasurer, Newtownabbey Independent Christian School",
-    body: "I look after a budget of around £100k a year and report to the management committee every month. Ledger came out of this role, and cut my monthly accounts from several evenings to about 30 minutes.",
+    body: "I look after a budget of around £100k a year and report to the management committee every month. I kept the accounts by hand in Excel for over a year, then built Ledger in August 2026. My first month in it took under 30 minutes, down from several evenings.",
   },
   {
     when: "Before software",
