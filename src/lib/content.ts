@@ -46,6 +46,9 @@ export type Project = {
   diagram?: { label: string; steps: string[] };
   // Spans both columns of the projects grid
   wide?: boolean;
+  // Headline outcome shown under the title; restates a fact from the body,
+  // never a new claim. Omitted for work that has no outcome yet
+  result?: { what: string; from: string; to: string; note?: string };
 };
 
 export const projects: Project[] = [
@@ -54,6 +57,12 @@ export const projects: Project[] = [
     role: "Volunteer treasurer, in use",
     title: "Ledger",
     body: "I've been treasurer for Newtownabbey Independent Christian School since March 2025, and for over a year I kept its accounts by hand in Excel, which took several evenings every month. In August 2026 I built Ledger in Python and Django to handle the repetitive parts, then entered the previous financial year into it, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee. My first live month in Ledger took under 30 minutes.",
+    result: {
+      what: "Monthly accounts",
+      from: "several evenings",
+      to: "under 30 minutes",
+      note: "first live month",
+    },
     tags: ["Python", "Django", "Vue 3", "JavaScript"],
     wide: true,
     image: {
@@ -77,6 +86,11 @@ export const projects: Project[] = [
     role: "Tetra Tech internship",
     title: "Bat Analytics Pro",
     body: "The ecology team were building the charts and tables for their survey reports by hand. I mapped how they did it, helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data, then demoed it to the team and helped them adopt it. I worked mostly on the Vue frontend. The app also sends that data to an outside AI service that writes report summaries.",
+    result: {
+      what: "Report charts and tables",
+      from: "made by hand",
+      to: "generated",
+    },
     tags: ["Laravel", "Vue", "JavaScript", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.webp",
@@ -156,7 +170,7 @@ export const toolingCards: ToolingCard[] = [
 ];
 
 export const contact = {
-  heading: "Let's work together.",
+  heading: "Hiring? Let's talk.",
   body: `I'm looking for ${profile.targetRoles} in ${profile.workPreference}. ${profile.status}.`,
   // Starts on its own line
   cta: "Email is the best way to reach me.",
