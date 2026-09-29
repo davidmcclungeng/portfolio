@@ -18,7 +18,7 @@ export const hero = {
   rolesLabel: "Open to",
   roles: ["Software developer", "Digital transformation", "Automation with AI"],
   intro:
-    "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and am due to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team opened my eyes to software development and AI automation. The work I enjoy most is sitting down with a team, learning how they do a job today and building software that takes the repetitive parts off their hands, so they have more time for the work that needs them. I'm now looking for my first role in the field. In my free time I'm building my skills through two Udemy courses, the Full-Stack Web Development Bootcamp and 100 Days of Code: The Complete Python Pro Bootcamp, and through my own software projects.",
+    "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and am due to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team opened my eyes to software development and AI automation. The work I enjoy most is sitting down with a team, learning how they do a job today and building software that takes the repetitive parts off their hands, so they have more time for the work that needs them. I'm now looking for my first role in the field.",
 };
 
 export const buildRecord = [
@@ -158,6 +158,10 @@ export const experience = [
 ];
 
 export const education = [
+  {
+    when: "In progress",
+    what: "Udemy courses: Full-Stack Web Development Bootcamp; 100 Days of Code: The Complete Python Pro Bootcamp",
+  },
   { when: "2025 – 2026", what: "MSc AI in Business, Queen's University Belfast" },
   { when: "2021 – 2024", what: "BA Broadcast Production, Queen's University Belfast" },
   {
