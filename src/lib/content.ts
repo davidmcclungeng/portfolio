@@ -21,55 +21,16 @@ export const hero = {
     "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and am due to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team was my first software job. The work I enjoy most is sitting down with a team, learning how they do a job today and building software that takes the repetitive parts off their hands, so they have more time for the work that needs them. I'm now looking for my first role in the field.",
 };
 
-export const buildRecord = [
-  {
-    num: "01",
-    built: "Bat Analytics Pro",
-    value: "Laravel + Vue",
-    where: "Tetra Tech Internship, Summer 2026",
-  },
-  {
-    num: "02",
-    built: "Ledger",
-    value: "Django + Vue 3",
-    where: "Financial Reporting Tool",
-  },
-  {
-    num: "03",
-    built: "New website for a former employer",
-    value: "Vue 3 + TypeScript",
-    where: "Premier Sound Solutions",
-  },
-  {
-    num: "04",
-    built: "Postgraduate study",
-    value: "MSc AI in Business",
-    where: "QUB, 2025 to 2026",
-  },
-];
-
-export const buildRecordNote =
-  "I use Claude Code to write much of my code. My part is deciding what to build, reading what it writes and testing it.";
-
+// Scannable keywords only: the projects and experience above carry the detail
 export const skillGroups = [
-  {
-    label: "Backend",
-    body: "Django and Python on Ledger, backed by a SQL database. On Bat Analytics Pro I worked mostly on the frontend, against a Laravel API.",
-    tags: ["Django", "Python", "SQL", "Laravel"],
-  },
-  {
-    label: "Frontend",
-    body: "Vue with JavaScript on Bat Analytics Pro and Ledger. Vue 3 with TypeScript on the Premier Sound Solutions site.",
-    tags: ["Vue", "JavaScript", "TypeScript", "PrimeVue"],
-  },
+  { label: "Backend", tags: ["Django", "Python", "SQL", "Laravel"] },
+  { label: "Frontend", tags: ["Vue", "JavaScript", "TypeScript", "PrimeVue"] },
   {
     label: "Tools & testing",
-    body: "Claude Code day to day. Pest and PHPUnit tests written in PHP, run through Azure Pipelines.",
-    tags: ["Claude Code", "Git", "PHP", "Azure Pipelines"],
+    tags: ["Claude Code", "Git", "PHP", "Pest", "PHPUnit", "Azure Pipelines"],
   },
   {
     label: "Process & people",
-    body: "Worked in a Scrum team at Tetra Tech, where I mapped the ecology team's reporting process, then demoed Bat Analytics Pro and helped them adopt it. Monthly reports to a non-technical committee as treasurer, and 50+ people trained on AV systems before that.",
     tags: ["Process mapping", "Agile / Scrum", "User adoption", "Stakeholder reporting", "Training"],
   },
 ];
@@ -90,32 +51,6 @@ export type Project = {
 export const projects: Project[] = [
   {
     number: "01",
-    role: "Tetra Tech internship",
-    title: "Bat Analytics Pro",
-    body: "The ecology team were building the charts and tables for their survey reports by hand. I mapped how they did it, helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data, then demoed it to the team and helped them adopt it. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other and a check that blocks a summary until data entry is complete.",
-    tags: ["Laravel", "Vue", "JavaScript", "JSON Schema", "Claude Code"],
-    image: {
-      src: "/images/project-tetratech.webp",
-      alt: "Export page of Bat Analytics Pro listing downloadable survey tables as Excel and PNG files",
-      width: 840,
-      height: 405,
-    },
-  },
-  {
-    number: "02",
-    role: "Freelance, in development",
-    title: "Premier Sound Solutions",
-    body: "I used to work there as a media technician. They've asked me back to replace their old WordPress site with one that wins new clients and shows their installations. I'm building it in Vue 3 and TypeScript.",
-    tags: ["Vue 3", "TypeScript", "PrimeVue"],
-    image: {
-      src: "/images/project-pss.webp",
-      alt: "Homepage of the new Premier Sound Solutions website",
-      width: 840,
-      height: 525,
-    },
-  },
-  {
-    number: "03",
     role: "Volunteer treasurer, in use",
     title: "Ledger",
     body: "I've been treasurer for Newtownabbey Independent Christian School since March 2025, and for over a year I kept its accounts by hand in Excel, which took several evenings every month. In August 2026 I built Ledger in Python and Django to handle the repetitive parts, then entered the previous financial year into it, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee. My first live month in Ledger took under 30 minutes.",
@@ -137,18 +72,44 @@ export const projects: Project[] = [
       ],
     },
   },
+  {
+    number: "02",
+    role: "Tetra Tech internship",
+    title: "Bat Analytics Pro",
+    body: "The ecology team were building the charts and tables for their survey reports by hand. I mapped how they did it, helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data, then demoed it to the team and helped them adopt it. I worked mostly on the Vue frontend. The app also sends that data to an outside AI service that writes report summaries.",
+    tags: ["Laravel", "Vue", "JavaScript", "JSON Schema", "Claude Code"],
+    image: {
+      src: "/images/project-tetratech.webp",
+      alt: "Export page of Bat Analytics Pro listing downloadable survey tables as Excel and PNG files",
+      width: 840,
+      height: 405,
+    },
+  },
+  {
+    number: "03",
+    role: "Freelance, in development",
+    title: "Premier Sound Solutions",
+    body: "I used to work there as a media technician. They've asked me back to replace their old WordPress site with one that wins new clients and shows their installations. I'm building it in Vue 3 and TypeScript.",
+    tags: ["Vue 3", "TypeScript", "PrimeVue"],
+    image: {
+      src: "/images/project-pss.webp",
+      alt: "Homepage of the new Premier Sound Solutions website",
+      width: 840,
+      height: 525,
+    },
+  },
 ];
 
 export const experience = [
   {
     when: "Summer 2026",
     role: "Data and AI Intern, Tetra Tech",
-    body: "My first software job, working in a Scrum team. I mapped the ecology team's reporting process, worked on Bat Analytics Pro and helped the team adopt it through demos. I also added tests to its CI pipeline and joined the sessions where we worked out what the team needed.",
+    body: "My first software job, in a Scrum team. Alongside Bat Analytics Pro I added tests to its CI pipeline and joined the requirements sessions with the ecology team.",
   },
   {
     when: "Since March 2025, voluntary",
     role: "Treasurer, Newtownabbey Independent Christian School",
-    body: "I look after a budget of around £100k a year and report to the management committee every month. I kept the accounts by hand in Excel for over a year, then built Ledger in August 2026. My first month in it took under 30 minutes, down from several evenings.",
+    body: "I look after a budget of around £100k a year and report to the management committee every month. Ledger came out of this role.",
   },
   {
     when: "Before software",
@@ -170,46 +131,29 @@ export const education = [
   },
 ];
 
-export type ToolingCall = {
-  verdict: string;
-  // Filled chip where the call kept a tool, outline where it removed one
-  kept: boolean;
-  what: string;
+export type ToolingCard = {
+  // Short context chip above the title
+  label: string;
+  title: string;
   body: string;
 };
 
 export const toolingIntro =
-  "I use Claude Code every day, wired through MCP to GitHub, Azure, Cloudflare and a real browser. Giving an agent that much reach is the easy part. The engineering is in deciding what to trust, and these are the calls I have actually made.";
+  "I use Claude Code to write much of my code. My part is deciding what to build, reading what it writes and testing it. The harder part is deciding what AI should be trusted with.";
 
-export const toolingCalls: ToolingCall[] = [
+// Product work first: the safeguard in Bat Analytics Pro is the stronger evidence
+export const toolingCards: ToolingCard[] = [
   {
-    verdict: "Adopted",
-    kept: true,
-    what: "GitHub and Azure, on least privilege",
-    body: "Both reach real accounts, so I treat them as production-adjacent by default. The GitHub token is fine-grained and scoped to the repositories I actually work in, with the admin and organisation toolsets left off. Reading and inspecting runs freely; anything that mutates infrastructure stops and asks me first.",
+    label: "In a product",
+    title: "A person checks before AI writes",
+    body: "Bat Analytics Pro sends survey data to an outside AI service that writes report summaries. I helped specify the rule that blocks a summary until the team has confirmed data entry is complete, so the AI never writes up half-entered data. I also helped design the JSON format it sends and the short-lived signed token the two services use to trust each other.",
   },
   {
-    verdict: "Rejected",
-    kept: false,
-    what: "A community Docker MCP server",
-    body: "It asked for full Docker socket access, which is root-equivalent control of the host, and the source repository it linked to was a dead GitHub link. An unverifiable source requesting the highest possible privilege is the one combination I will not accept. I drive Docker from the CLI instead.",
-  },
-  {
-    verdict: "Removed",
-    kept: false,
-    what: "A skill that scanned as critical risk",
-    body: "I read it myself and it looked harmless. I removed it anyway. It came from a repository with almost no usage behind it, and a rating that severe deserves more than my own quick read. I would rather lose a nice-to-have than overrule a warning I cannot explain.",
-  },
-  {
-    verdict: "Kept, with eyes open",
-    kept: true,
-    what: "A skill that fetches its own instructions",
-    body: "It comes from an official Vercel repository, but it pulls its rules from a remote file every time it runs rather than shipping them. The source is trustworthy enough to keep, and it is still a different shape of risk from a fixed skill: a future change to that one file reaches me automatically. That is a trade I made knowingly, not one I missed.",
+    label: "In my own tools",
+    title: "Least access, verified sources",
+    body: "My AI tools can reach my real GitHub and cloud accounts, so they get only the access they need and must ask before changing anything. I turned down an add-on that wanted far more access than it needed from a source I couldn't verify, and removed another that failed a security scan even though it looked harmless to me.",
   },
 ];
-
-export const toolingRule =
-  "The check before anything gets installed: the source repository has to be real and inspectable, the permissions it asks for have to match what it credibly needs, and a scanner warning I cannot account for is a no.";
 
 export const contact = {
   heading: "Let's work together.",

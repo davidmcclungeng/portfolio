@@ -34,6 +34,12 @@ export function Hero() {
           {profile.email}
         </a>
       </div>
+      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+        {profile.location}
+        <span aria-hidden> · </span>
+        <span className="sr-only">, </span>
+        <span className="text-accent-strong">{profile.status}</span>
+      </p>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { toolingCalls, toolingIntro, toolingRule } from "@/lib/content";
+import { toolingCards, toolingIntro } from "@/lib/content";
 import { Corners } from "./Corners";
 import { Reveal } from "./Reveal";
 
@@ -12,31 +12,22 @@ export function Tooling() {
           {toolingIntro}
         </p>
         <div className="grid gap-x-7 gap-y-12 md:grid-cols-2">
-          {toolingCalls.map((call) => (
+          {toolingCards.map((card) => (
             <div
-              key={call.what}
+              key={card.title}
               className="relative flex flex-col items-start gap-2.5 border border-border bg-background p-6"
             >
               <Corners />
-              <span
-                className={`inline-flex items-center px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.06em] ${
-                  call.kept
-                    ? "bg-accent/15 text-accent-strong"
-                    : "border border-accent text-accent-strong"
-                }`}
-              >
-                {call.verdict}
+              <span className="inline-flex items-center bg-accent/15 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.06em] text-accent-strong">
+                {card.label}
               </span>
               <h3 className="font-heading text-lg font-semibold uppercase tracking-[0.02em]">
-                {call.what}
+                {card.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted">{call.body}</p>
+              <p className="text-sm leading-relaxed text-muted">{card.body}</p>
             </div>
           ))}
         </div>
-        <p className="mt-7 border-l-2 border-accent pl-4 text-sm leading-relaxed">
-          {toolingRule}
-        </p>
       </Reveal>
     </section>
   );

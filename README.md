@@ -17,8 +17,10 @@ Personal portfolio for David McClung, an aspiring software developer who has jus
 src/
   app/            layout, page, global styles, icons and link-preview image
                   robots.ts and sitemap.ts (static metadata routes)
-  components/     page sections (Hero, Plate, Skills, Work, Background, Contact, Nav)
-  lib/content.ts  all site copy: profile, build record, skills, projects, experience, education
+  components/     page sections, in page order (Hero, Work, Experience, Skills, Tooling,
+                  Education, Contact) plus Nav and Footer
+  lib/content.ts  all site copy: profile, hero, projects, experience, skills, AI section,
+                  education, contact
 public/           CV (PDF), project screenshots (WebP) and _headers (security headers)
 wrangler.jsonc    Cloudflare Worker config and custom domains
 ```
