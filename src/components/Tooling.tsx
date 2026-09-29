@@ -6,7 +6,7 @@ export function Tooling() {
   return (
     <section id="tooling" className="mx-auto max-w-[1040px] px-6 py-10 lg:px-10">
       <Reveal>
-        <h2 className="section-title">How I work with AI</h2>
+        <h2 className="section-title">Working with AI</h2>
         <hr className="rule" />
         <p className="mb-7 max-w-[68ch] text-sm leading-relaxed text-muted">
           {toolingIntro}
