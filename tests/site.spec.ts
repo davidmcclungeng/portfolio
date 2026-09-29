@@ -42,12 +42,15 @@ test.describe("content", () => {
   });
 
   test("every image has meaningful alt text and actually loads", async ({ page }) => {
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     const images = page.locator("img");
     const count = await images.count();
     expect(count).toBeGreaterThan(0);
     for (let i = 0; i < count; i++) {
       const img = images.nth(i);
+      // Images are lazy, so bring each one near the viewport as a reader would.
+      // Jumping to the bottom only loads those within the browser's lazy-load
+      // distance of it, which stops holding as soon as the page gets longer
+      await img.scrollIntoViewIfNeeded();
       const alt = await img.getAttribute("alt");
       expect(alt?.trim().length ?? 0).toBeGreaterThan(10);
       await expect(img).toHaveJSProperty("complete", true);
