@@ -76,7 +76,7 @@ export const projects: Project[] = [
     number: "02",
     role: "Tetra Tech internship",
     title: "Bat Analytics Pro",
-    body: "The ecology team were building the charts and tables for their survey reports by hand. I mapped how they did it, helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data, then demoed it to the team and helped them adopt it. I worked mostly on the Vue frontend. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other and a check that blocks a summary until data entry is complete.",
+    body: "The ecology team were building the charts and tables for their survey reports by hand. I mapped how they did it, helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data, then demoed it to the team and helped them adopt it. I worked mostly on the Vue frontend. The app also sends that data to an outside AI service that writes report summaries.",
     tags: ["Laravel", "Vue", "JavaScript", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.webp",
@@ -131,46 +131,29 @@ export const education = [
   },
 ];
 
-export type ToolingCall = {
-  verdict: string;
-  // Filled chip where the call kept a tool, outline where it removed one
-  kept: boolean;
-  what: string;
+export type ToolingCard = {
+  // Short context chip above the title
+  label: string;
+  title: string;
   body: string;
 };
 
 export const toolingIntro =
-  "I use Claude Code to write much of my code. My part is deciding what to build, reading what it writes and testing it. I use it every day, wired through MCP to GitHub, Azure, Cloudflare and a real browser. Giving an agent that much reach is the easy part. The engineering is in deciding what to trust, and these are the calls I have actually made.";
+  "I use Claude Code to write much of my code. My part is deciding what to build, reading what it writes and testing it. The harder part is deciding what AI should be trusted with.";
 
-export const toolingCalls: ToolingCall[] = [
+// Product work first: the safeguard in Bat Analytics Pro is the stronger evidence
+export const toolingCards: ToolingCard[] = [
   {
-    verdict: "Adopted",
-    kept: true,
-    what: "GitHub and Azure, on least privilege",
-    body: "Both reach real accounts, so I treat them as production-adjacent by default. The GitHub token is fine-grained and scoped to the repositories I actually work in, with the admin and organisation toolsets left off. Reading and inspecting runs freely; anything that mutates infrastructure stops and asks me first.",
+    label: "In a product",
+    title: "A person checks before AI writes",
+    body: "Bat Analytics Pro sends survey data to an outside AI service that writes report summaries. I helped specify the rule that blocks a summary until the team has confirmed data entry is complete, so the AI never writes up half-entered data. I also helped design the JSON format it sends and the short-lived signed token the two services use to trust each other.",
   },
   {
-    verdict: "Rejected",
-    kept: false,
-    what: "A community Docker MCP server",
-    body: "It asked for full Docker socket access, which is root-equivalent control of the host, and the source repository it linked to was a dead GitHub link. An unverifiable source requesting the highest possible privilege is the one combination I will not accept. I drive Docker from the CLI instead.",
-  },
-  {
-    verdict: "Removed",
-    kept: false,
-    what: "A skill that scanned as critical risk",
-    body: "I read it myself and it looked harmless. I removed it anyway. It came from a repository with almost no usage behind it, and a rating that severe deserves more than my own quick read. I would rather lose a nice-to-have than overrule a warning I cannot explain.",
-  },
-  {
-    verdict: "Kept, with eyes open",
-    kept: true,
-    what: "A skill that fetches its own instructions",
-    body: "It comes from an official Vercel repository, but it pulls its rules from a remote file every time it runs rather than shipping them. The source is trustworthy enough to keep, and it is still a different shape of risk from a fixed skill: a future change to that one file reaches me automatically. That is a trade I made knowingly, not one I missed.",
+    label: "In my own tools",
+    title: "Least access, verified sources",
+    body: "My AI tools can reach my real GitHub and cloud accounts, so they get only the access they need and must ask before changing anything. I turned down an add-on that wanted far more access than it needed from a source I couldn't verify, and removed another that failed a security scan even though it looked harmless to me.",
   },
 ];
-
-export const toolingRule =
-  "The check before anything gets installed: the source repository has to be real and inspectable, the permissions it asks for have to match what it credibly needs, and a scanner warning I cannot account for is a no.";
 
 export const contact = {
   heading: "Let's work together.",
