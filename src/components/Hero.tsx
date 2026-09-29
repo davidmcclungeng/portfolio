@@ -23,7 +23,7 @@ export function Hero() {
           ))}
         </ul>
       </div>
-      <p className="mt-4 max-w-[56ch] text-base leading-relaxed text-muted">
+      <p className="mt-4 max-w-[72ch] text-base leading-relaxed text-muted">
         {hero.intro}
       </p>
       <div className="mt-7 flex flex-wrap gap-3">
