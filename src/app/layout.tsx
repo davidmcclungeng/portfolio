@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   title: "David McClung | Aspiring Software Developer",
   description:
-    "Aspiring software developer and MSc AI in Business student at Queen's University Belfast, using AI to automate manual work. Available now for software and AI / automation roles in Belfast.",
+    "Aspiring software developer who has just completed an MSc in AI in Business at Queen's University Belfast, using AI to automate manual work. Available now for software, AI / automation and digital transformation roles in Belfast.",
   // Link previews on LinkedIn, Slack, email and X; the image comes from app/opengraph-image.png
   openGraph: {
     title: "David McClung | Aspiring Software Developer",
     description:
-      "Aspiring software developer looking for software and AI / automation roles in Belfast. Available now.",
+      "Aspiring software developer looking for software, AI / automation and digital transformation roles in Belfast. Available now.",
     url: "/",
     siteName: "David McClung",
     locale: "en_GB",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "David McClung | Aspiring Software Developer",
     description:
-      "Aspiring software developer looking for software and AI / automation roles in Belfast. Available now.",
+      "Aspiring software developer looking for software, AI / automation and digital transformation roles in Belfast. Available now.",
   },
 };
 

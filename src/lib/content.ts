@@ -2,7 +2,7 @@ export const profile = {
   name: "David McClung",
   location: "Belfast, UK",
   status: "Available now",
-  targetRoles: "software and AI / automation roles",
+  targetRoles: "software, AI / automation and digital transformation roles",
   workPreference: "Belfast, hybrid or on-site",
   email: "davidmcclung15@outlook.com",
   github: "https://github.com/davidmcclungeng",
@@ -14,8 +14,11 @@ export const hero = {
   // Two lines of the h1; the second is set in the accent colour
   headline: "Aspiring software developer,",
   headlineAccent: "using AI to automate manual work.",
+  // Kinds of role sought, shown as a strip under the headline
+  rolesLabel: "Open to",
+  roles: ["Software developer", "Digital transformation", "Automation with AI"],
   intro:
-    "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and hope to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team opened my eyes to software development and AI automation. I'm now looking for my first role in the field, while building my skills through certifications and working on my own software projects in my free time.",
+    "I have just completed an MSc in Artificial Intelligence in Business at Queen's University Belfast, and hope to graduate in December 2026. My summer internship with Tetra Tech's Data & AI team opened my eyes to software development and AI automation. The work I enjoy most is sitting down with a team, learning how they do a job today and building software that takes the repetitive parts off their hands, so they have more time for the work that needs them. I'm now looking for my first role in the field, while building my skills through certifications and working on my own software projects in my free time.",
 };
 
 export const buildRecord = [
@@ -64,6 +67,11 @@ export const skillGroups = [
     body: "Claude Code day to day. Pest and PHPUnit tests written in PHP, run through Azure Pipelines.",
     tags: ["Claude Code", "Git", "PHP", "Azure Pipelines"],
   },
+  {
+    label: "Process & people",
+    body: "Mapped the ecology team's reporting process at Tetra Tech, then demoed Bat Analytics Pro and helped them adopt it. Monthly reports to a non-technical committee as treasurer, and 50+ people trained on AV systems before that.",
+    tags: ["Process mapping", "User adoption", "Stakeholder reporting", "Training"],
+  },
 ];
 
 export type Project = {
@@ -84,7 +92,7 @@ export const projects: Project[] = [
     number: "01",
     role: "Tetra Tech internship",
     title: "Bat Analytics Pro",
-    body: "The ecology team were building the charts and tables for their survey reports by hand. I helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other and a check that blocks a summary until data entry is complete.",
+    body: "The ecology team were building the charts and tables for their survey reports by hand. I mapped how they did it, helped build Bat Analytics Pro, a Laravel API and Vue app that generates them from survey and weather data, then demoed it to the team and helped them adopt it. The app also sends that data to an outside AI service that writes report summaries. I also helped to design the JSON format it sends, the short-lived signed token the two services use to trust each other and a check that blocks a summary until data entry is complete.",
     tags: ["Laravel", "Vue", "JavaScript", "JSON Schema", "Claude Code"],
     image: {
       src: "/images/project-tetratech.webp",
@@ -110,7 +118,7 @@ export const projects: Project[] = [
     number: "03",
     role: "Volunteer treasurer, in use",
     title: "Ledger",
-    body: "I'm treasurer for Newtownabbey Independent Christian School, and its accounts were kept in Excel. I have used Python and Django to build a replacement. It has now been used to process a full financial year, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee.",
+    body: "I'm treasurer for Newtownabbey Independent Christian School. Its accounts were kept in Excel, and keeping them up took me several evenings every month. I built Ledger in Python and Django to handle the repetitive parts, and the monthly accounts now take about 30 minutes. It has processed a full financial year, covering cash and cheque lodgements, credit card payments, 12 monthly reports and the annual report for the management committee.",
     tags: ["Python", "Django", "Vue 3", "JavaScript"],
     wide: true,
     image: {
@@ -135,12 +143,12 @@ export const experience = [
   {
     when: "Summer 2026",
     role: "Data and AI Intern, Tetra Tech",
-    body: "My first software job. I worked on Bat Analytics Pro, the ecology team's reporting app, added tests to its CI pipeline and joined the sessions where we worked out what the team needed.",
+    body: "My first software job. I mapped the ecology team's reporting process, worked on Bat Analytics Pro and helped the team adopt it through demos. I also added tests to its CI pipeline and joined the sessions where we worked out what the team needed.",
   },
   {
     when: "Ongoing, voluntary",
     role: "Treasurer, Newtownabbey Independent Christian School",
-    body: "I look after a budget of around £100k a year and report to the management committee every month. Ledger came out of this role.",
+    body: "I look after a budget of around £100k a year and report to the management committee every month. Ledger came out of this role, and cut my monthly accounts from several evenings to about 30 minutes.",
   },
   {
     when: "Before software",

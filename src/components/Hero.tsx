@@ -7,7 +7,23 @@ export function Hero() {
         <span className="sm:block">{hero.headline}</span>{" "}
         <span className="text-accent sm:block">{hero.headlineAccent}</span>
       </h1>
-      <p className="mt-5 max-w-[56ch] text-base leading-relaxed text-muted">
+      <div className="mt-5 flex flex-col gap-y-1 font-heading text-sm font-semibold uppercase tracking-[0.08em] sm:text-base md:flex-row md:items-baseline md:gap-x-3">
+        <p id="roles-label" className="text-muted">
+          {hero.rolesLabel}
+        </p>
+        {/* Stacked on small screens: a wrapped row would start lines with a divider */}
+        <ul aria-labelledby="roles-label" className="flex flex-col gap-y-1 md:flex-row md:gap-x-3">
+          {hero.roles.map((role, i) => (
+            <li
+              key={role}
+              className={`text-accent-strong ${i === 0 ? "" : "md:border-l md:border-border-strong md:pl-3"}`}
+            >
+              {role}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p className="mt-4 max-w-[56ch] text-base leading-relaxed text-muted">
         {hero.intro}
       </p>
       <div className="mt-7 flex flex-wrap gap-3">

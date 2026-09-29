@@ -16,7 +16,7 @@ export function Contact() {
           <h2 className="font-heading text-4xl font-semibold uppercase leading-none tracking-[0.01em] sm:text-5xl">
             {contact.heading}
           </h2>
-          <p className="mt-3 max-w-[56ch] text-[15px] leading-relaxed opacity-85">
+          <p className="mt-3 max-w-[56ch] text-pretty text-[15px] leading-relaxed opacity-85">
             {contact.body} <br />
             {contact.cta}
           </p>
